@@ -91,7 +91,7 @@ func main() {
 
 	// Function to check if the process is Docker-related
 	isDockerProcess := func(lsofOut string) bool {
-		return strings.Contains(strings.ToLower(lsofOut), "docker")
+		return strings.Contains(strings.ToLower(lsofOut), "docker") || strings.Contains(strings.ToLower(lsofOut), "com.docke")
 	}
 
 	// Function to get Docker container info for a specific port
